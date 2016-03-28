@@ -1,0 +1,100 @@
+.off-canvas
+    +position(fixed, 0px -11rem 0px null)
+    +transition()
+    width: 8rem
+    height: 100%
+    background-color: white
+    color: rgba(255,255,255,0.8)
+    padding: 1rem
+    -webkit-box-shadow: inset 0px -15px 10px 0px rgba(0,0,0,1)
+    -moz-box-shadow: inset 0px -15px 10px 0px rgba(0,0,0,1)
+    box-shadow: inset 8px 0 10px -8px #333
+
+    h3
+        margin: 0  0 0.8rem 0.5rem
+        font-size: 1.3rem
+        color: black
+
+    ul
+        &:before
+            content: 'menu'
+            margin: 0  0 0.8rem 0.5rem
+            font-size: 1.3rem
+            color: black
+
+        li
+            border-bottom: 1px rgba(0,0,0,0.1) solid
+            font-weight: 400
+            color: rgba(0,0,0,0.5)
+            padding: 1rem 0
+            margin: 0 0.5rem
+            list-style: none
+            cursor: pointer
+            -webkit-font-smoothing: antialiased
+            +transition()
+
+            a
+                border: none
+                box-shadow: none
+                color: rgba(0,0,0,0.5)
+
+                &:hover
+                    color: rgba(0,0,0,1)
+
+
+.toggler
+    text-decoration: none
+    +transition()
+    font-size: 3rem
+    color: rgba(0,0,0,1)
+    +position(fixed, null 1rem null null)
+    z-index: 1
+    background: rgba(255,255,255,0.3)
+
+#sidebartoggler
+    display: none
+
+    &:checked + .content-wrap
+
+        .off-canvas
+            right: 0em
+
+        .toggler
+            right: 11rem
+            color: rgba(0,0,0,1)
+
+        .content
+            padding-right: 10rem
+
+
+@media screen and (min-width: 801px)
+    .toggler
+        display: none
+
+    .off-canvas
+        position: inherit
+
+        ul
+            position: absolute
+            top: 1rem
+            right: 1rem
+            color: rgba(255,255,255,1)
+
+            &:before
+                content: none
+
+            li
+                border-bottom: none
+                font-weight: 600
+                color: rgba(255,255,255,1)
+                padding: 1rem 0
+                margin: 0 0.5rem
+                list-style: none
+                cursor: pointer
+                -webkit-font-smoothing: antialiased
+                display: inline
+
+                a
+                    border: none
+                    box-shadow: none
+                    color: rgba(255,255,255,1)

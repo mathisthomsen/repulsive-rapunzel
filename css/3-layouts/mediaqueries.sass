@@ -1,0 +1,88 @@
+@media screen and (min-width: 818px)
+    .social
+        a
+            &:hover
+                box-shadow: none
+                -webkit-box-shadow: none
+                -moz-box-shadow: none
+                opacity: 0.8
+
+@media screen and (max-width: 818px)
+    .full-2
+        .desc
+            margin: 0 auto 1rem auto
+
+        .flex
+            justify-content: center
+            //padding-bottom: 3rem
+            margin-bottom: 0
+
+            .ramon, .annika, .mathis
+                width: 150px
+                height: 150px
+                background-size: cover
+                margin-right: 2rem
+
+                section
+                    margin-top: 20px
+
+            .annika
+                background-position: -150px 0
+
+            .mathis
+                background-position: -300px 0
+                margin-right: 0
+
+    .full-3
+        padding: 2rem 0
+        background:
+            size: contain
+            position: center bottom
+
+        .mail-wrap
+
+            .mail
+                font-size: 2rem
+
+        .social
+            h3
+                font-size: 1.5rem
+
+            a
+                font-size: 7rem
+
+    footer
+        font-size: 0.6rem
+
+@media screen and (max-width: 580px)
+    .full-2
+        .flex
+            display: block
+            padding-bottom: 0
+
+            .ramon, .annika, .mathis
+                width: 200px
+                height: 200px
+                background-size: cover
+                margin: 0 auto 2rem auto
+
+            .annika
+                background-position: -200px 0
+            .mathis
+                background-position: -400px 0
+        .desc
+            padding: 0 1em
+
+    .full-3
+        padding: 2rem 0
+        background:
+            size: cover
+            position: center top
+            attachment: fixed
+
+@media screen and (max-width: 399px)
+    header
+        .head
+            .rapunzel
+                h1
+                    font-size: 2rem
