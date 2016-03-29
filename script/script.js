@@ -134,7 +134,7 @@ $(window).scroll(function(){
 
     if(wScroll <= $('#start').height() && $(window).width() > 374){
             $('.logo').css({
-                'transform' : 'translate(0px, '+ wScroll /2.15 +'%)', 'opacity' :0.6 -wScroll /700
+                'transform' : 'translate(0px, '+ wScroll /5 +'%)', 'opacity' :0.6 -wScroll /700
             });
             $('.rapunzel').css({
                 'transform' : 'translate(0px, '+ wScroll /0.9+'%)'
