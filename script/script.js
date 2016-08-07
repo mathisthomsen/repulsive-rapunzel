@@ -132,7 +132,7 @@ function labnolIframe() {
 $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
 
-    if(wScroll <= $('#start').height() && $(window).width() > 374){
+    if(wScroll <= $('#start').height() && $(window).width() > 420){
             $('.logo').css({
                 'transform' : 'translate(0px, '+ wScroll /5 +'%)', 'opacity' :0.6 -wScroll /700
             });

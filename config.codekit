@@ -1458,6 +1458,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
+	"\/css\/3-layouts\/impressum.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/3-layouts\/impressum.sass",
+		"outputAbbreviatedPath": "\/css\/css\/impressum.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
 	"\/css\/3-layouts\/mediaqueries.sass": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1499,6 +1515,28 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
+	"\/img\/annika-x1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11533,
+		"inputAbbreviatedPath": "\/img\/annika-x1.jpg",
+		"outputAbbreviatedPath": "\/img\/annika-x1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/annika-x2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26988,
+		"inputAbbreviatedPath": "\/img\/annika-x2.jpg",
+		"outputAbbreviatedPath": "\/img\/annika-x2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/avat-sprite1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1521,6 +1559,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/background_1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 325322,
+		"inputAbbreviatedPath": "\/img\/background_1.jpg",
+		"outputAbbreviatedPath": "\/img\/background_1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/contact-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1531,6 +1580,59 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/img\/mathis-x1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12182,
+		"inputAbbreviatedPath": "\/img\/mathis-x1.jpg",
+		"outputAbbreviatedPath": "\/img\/mathis-x1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/mathis-x2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27080,
+		"inputAbbreviatedPath": "\/img\/mathis-x2.jpg",
+		"outputAbbreviatedPath": "\/img\/mathis-x2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/ramon-x1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11236,
+		"inputAbbreviatedPath": "\/img\/ramon-x1.jpg",
+		"outputAbbreviatedPath": "\/img\/ramon-x1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/ramon-x2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24767,
+		"inputAbbreviatedPath": "\/img\/ramon-x2.jpg",
+		"outputAbbreviatedPath": "\/img\/ramon-x2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/impressum.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/impressum.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/index.html": {
 		"fileType": 8192,
