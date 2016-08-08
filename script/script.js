@@ -133,11 +133,11 @@ $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
 
     if(wScroll <= $('#start').height() && $(window).width() > 420){
-            $('.logo').css({
-                'transform' : 'translate(0px, '+ wScroll /5 +'%)', 'opacity' :0.6 -wScroll /700
-            });
+            //$('.logo').css({
+                //'transform' : 'translate(0px, '+ wScroll /5 +'%)', 'opacity' :0.6 -wScroll /700
+            //});
             $('.rapunzel').css({
-                'transform' : 'translate(0px, '+ wScroll /0.9+'%)'
+                'transform' : 'translate(0px, '+ wScroll /1.7 + '%)'
             });
             $('.dig').css({
                 'opacity' : 1 -wScroll /300
