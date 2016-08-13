@@ -140,6 +140,33 @@ function labnolIframe() {
 $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
 
+    if(wScroll >= $(window).height() && $(window).width() > 1249){
+        //console.log('hit the spot');
+        $('.logo svg').css({
+            //'transform' : 'scale(0.5)'
+            'width' : '9.375em', 'background' : 'none'
+        });
+        $('.b').css({
+            'stroke' : '#000000'
+        });
+        $('.c').css({
+            'stroke' : '#000000'
+        });
+    }
+    if(wScroll < $(window).height() && $(window).width() > 1249){
+        //console.log('hit the other spot');
+        $('.logo svg').css({
+            'width' : '18.75em', 'background' : 'black'
+        });
+        $('.b').css({
+            'stroke' : '#ffffff'
+        });
+        $('.c').css({
+            'stroke' : '#ffffff'
+        });
+
+    }
+
     if(wScroll <= $('#start').height() && $(window).width() > 420){
             //$('.logo').css({
                 //'transform' : 'translate(0px, '+ wScroll /5 +'%)', 'opacity' :0.6 -wScroll /700

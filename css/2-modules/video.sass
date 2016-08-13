@@ -3,6 +3,17 @@
     background-color: $full-even
     box-shadow: 0px -2px 10px $video-shadow
 
+    .content
+
+        a
+            +transition ()
+
+            &:hover
+                box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
+                -webkit-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
+                -moz-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
+                +transition ()
+
 .youtube-container
     display: block
     margin: 20px auto
@@ -87,18 +98,6 @@ div.play-button
         &:after
             left: 0.5em
             margin-right: -50%
-
-a
-    text-decoration: none
-    cursor: pointer
-    display: inline
-    +transition ()
-
-    &:hover
-        box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
-        -webkit-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
-        -moz-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
-        +transition ()
 
 .btn
     width: 9rem
