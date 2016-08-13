@@ -8,6 +8,7 @@
     margin: 20px auto
     width: 100%
     max-width: 900px
+    position: relative
 
     .youtube-player
         display: block
@@ -44,10 +45,9 @@ div.play-button
     width: 72px
     left: 50%
     top: 50%
-    margin-left: -36px
-    margin-top: -36px
+    transform: translate(-50%, -50%)
     position: absolute
-    font-family: 'Material Icons'
+    //font-family: 'Material Icons'
     background:
         image: url("../img/ic_play_circle_outline_white_36px.svg")
         repeat: no-repeat
@@ -95,9 +95,9 @@ a
     +transition ()
 
     &:hover
-        box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $btn
-        -webkit-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $btn
-        -moz-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $btn
+        box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
+        -webkit-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
+        -moz-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px #FF530D
         +transition ()
 
 .btn
