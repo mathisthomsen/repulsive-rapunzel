@@ -1,3 +1,29 @@
+.logo
+    position: fixed
+    left: 2rem
+    top: 1rem
+    z-index: 10001
+    width: auto
+    height: auto
+
+    svg
+        position: fixed
+        width: em(300)
+        //opacity: 0.4
+        background: black
+        //transform: scale(1)
+        //+transition(transform 0.3s ease-in-out)
+        +transition(width 0.2s ease-in-out, background 0.2s ease-in-out)
+
+        //g
+            #a
+                .a
+                    line
+                        .b
+                            stroke: fuchsia
+                            +transition(stroke 0.2s ease-in-out)
+
+
 header
     background:
         image: url('../img/background_1.jpg')
@@ -12,27 +38,6 @@ header
 
     .head
         height: 100%
-
-        .logo
-            //background:
-                image: url('../img/logo.svg')
-                size: 200px
-                position: center center
-                repeat: no-repeat
-            height: rem(200)
-            opacity: 0.6
-            width: 100%
-            //margin: 0 auto
-            z-index: 6
-            padding: 1rem 0
-
-            svg
-                position: fixed
-                z-index: 10001
-                left: 2rem
-                //transform: translate(-50%, 0)
-                width: 300px
-                background: black
 
         .rapunzel
             display: flex
