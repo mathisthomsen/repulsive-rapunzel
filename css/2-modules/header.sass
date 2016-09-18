@@ -43,7 +43,7 @@ header
     .head
         height: 100%
         background-color: $head-darken
-        animation: lighten 4s ease-in-out 2s infinite
+        animation: lighten 4s ease-in-out 0s infinite
 
         .rapunzel
             display: flex
@@ -87,7 +87,7 @@ header
                 z-index: 1001
                 opacity: 0
                 border-radius: 50%
-                animation: diastole 4s ease-in-out 0.5s infinite
+                animation: diastole 4s ease-in-out 0s infinite
 
             h1
                 font-size: 3rem
@@ -141,22 +141,26 @@ header
         transform: scale(2)
 
 @keyframes diastole
-    0%
+    13%
         opacity: 0
+        transform: scale(1)
 
-    20%
+    33%
         opacity: 0.5
 
-    40%
+    53%
         opacity: 0
         transform: scale(4)
 
 @keyframes lighten
-    10%
+    0%
         background-color: $head-darken
 
-    30%
+    50%
+        background-color: $head-darken
+
+    73%
         background-color: $head-lighten
 
-    85%
+    100%
         background-color: $head-darken
