@@ -153,7 +153,7 @@ $(window).scroll(function(){
             'stroke' : '#000000'
         });
     }
-    if(wScroll < $(window).height() && $(window).width() > 1249){
+    /*if(wScroll < $(window).height() && $(window).width() > 1249){
         //console.log('hit the other spot');
         $('.logo svg').css({
             'width' : '18.75em', 'background' : 'black'
@@ -166,8 +166,8 @@ $(window).scroll(function(){
         });
 
     }
-
-    if(wScroll <= $('#start').height() && $(window).width() > 420){
+*/
+    /*if(wScroll <= $('#start').height() && $(window).width() > 420){
             //$('.logo').css({
                 //'transform' : 'translate(0px, '+ wScroll /5 +'%)', 'opacity' :0.6 -wScroll /700
             //});
@@ -178,7 +178,7 @@ $(window).scroll(function(){
                 'opacity' : 1 -wScroll /300
             });
         }
-
+*/
     if(wScroll > $('.flex').offset().top - $(window).height() && $(window).width() > 769){
 
         var offset = Math.min(0, wScroll - $('.flex').offset().top + $(window).height() - 400);

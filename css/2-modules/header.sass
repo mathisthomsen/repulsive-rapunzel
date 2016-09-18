@@ -32,6 +32,10 @@ header
         attachment: fixed
     height: 100vh
     overflow: hidden
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
 
     .content
         padding: 0 !important
@@ -43,14 +47,46 @@ header
             display: flex
             align-items: center
             justify-content: center
-            padding-top: 10em
-            //margin-left: -5px
-            z-index: 5
             position: relative
-            //left: -4px
             color: white
-            margin: 0 auto
 
+            img
+                width: em(500px)
+                //background:
+                    color: $logo-bg
+                padding: 7em 5em
+                //border-radius: 50%
+                z-index: 9
+                text-shadow: 5px 5px 5px black
+
+
+            #systole
+                content: ""
+                display: inline-block
+                position: absolute
+                border: $pulse 2px solid
+                background-color: $pulse
+                box-sizing: border-box
+                width: 105px
+                height: 105px
+                z-index: 1001
+                opacity: 0
+                border-radius: 50%
+                animation: systole 4s ease-in-out 0s infinite
+
+            #diastole
+                content: ""
+                display: inline-block
+                position: absolute
+                //border: $pulse-dark 2px solid
+                background-color: $pulse-dark
+                box-sizing: border-box
+                width: 105px
+                height: 105px
+                z-index: 1001
+                opacity: 0
+                border-radius: 50%
+                animation: diastole 4s ease-in-out 0.5s infinite
 
             h1
                 font-size: 3rem
@@ -69,10 +105,6 @@ header
                     margin-right: 1rem
 
     .dig
-        //background-image: url("../img/downward.svg")
-        //background-size: 50px
-        background-position: center top
-        background-repeat: no-repeat
         height: 36px
         width: 36px
         position: absolute
@@ -81,6 +113,7 @@ header
         left: 50%
         margin-left: -18px
         +transition()
+        z-index: 100
 
         &:hover
             top: 89vh
@@ -94,3 +127,25 @@ header
             top: -2.9rem
             display: block
             width: 3rem
+
+@keyframes systole
+    0%
+        opacity: 0
+
+    20%
+        opacity: 0.5
+
+    40%
+        opacity: 0
+        transform: scale(2)
+
+@keyframes diastole
+    0%
+        opacity: 0
+
+    20%
+        opacity: 0.5
+
+    40%
+        opacity: 0
+        transform: scale(4)
