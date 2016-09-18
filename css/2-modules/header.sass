@@ -43,51 +43,50 @@ header
     .head
         height: 100%
         background-color: $head-darken
-        animation: lighten 4s ease-in-out 0s infinite
+        animation: lighten 14s ease-in-out infinite
 
         .rapunzel
-            display: flex
-            align-items: center
-            justify-content: center
+            //display: flex
+            //align-items: center
+            //justify-content: center
             position: relative
             color: white
+            transform-origin: center center
 
             img
                 width: em(500px)
                 //background:
                     color: $logo-bg
-                padding: 7em 5em
+                //padding: 7em 5em
                 //border-radius: 50%
                 z-index: 9
-                text-shadow: 5px 5px 5px black
+                top: 50vh
+                left: 50%
+                position: absolute
+                transform: translate(-50%,-50%)
 
-            #systole
-                content: ""
+            #systole, #diastole
                 display: inline-block
                 position: absolute
-                border: $pulse 2px solid
-                background-color: $pulse
                 box-sizing: border-box
                 width: 105px
                 height: 105px
                 z-index: 1001
                 opacity: 0
                 border-radius: 50%
-                animation: systole 4s ease-in-out 0s infinite
+                top: 50vh
+                left: 50%
+                position: absolute
+                transform: translate(-50%,-50%)
+                transform-origin: top left
 
             #diastole
-                content: ""
-                display: inline-block
-                position: absolute
-                //border: $pulse-dark 2px solid
                 background-color: $pulse-dark
-                box-sizing: border-box
-                width: 105px
-                height: 105px
-                z-index: 1001
-                opacity: 0
-                border-radius: 50%
                 animation: diastole 4s ease-in-out 0s infinite
+
+            #systole
+                background-color: $pulse
+                animation: systole 4s ease-in-out 0s infinite
 
             h1
                 font-size: 3rem
@@ -138,28 +137,31 @@ header
 
     40%
         opacity: 0
-        transform: scale(2)
+        transform: scale(2) translate(-50%,-50%)
 
 @keyframes diastole
     13%
         opacity: 0
-        transform: scale(1)
+        transform: scale(1) translate(-50%,-50%)
 
     33%
         opacity: 0.5
 
+    43%
+        transform: scale(4) translate(-50%,-50%)
+
     53%
         opacity: 0
-        transform: scale(4)
+        transform: scale(12) translate(-50%,-50%)
 
 @keyframes lighten
     0%
         background-color: $head-darken
 
-    50%
+    80%
         background-color: $head-darken
 
-    73%
+    90%
         background-color: $head-lighten
 
     100%
