@@ -23,110 +23,115 @@
                             stroke: fuchsia
                             +transition(stroke 0.2s ease-in-out)
 
+.header-wrapper
+    top: 0px
+    right: 0px
+    bottom: 0px
+    left: 0px
 
-header
-    background:
-        image: url('../img/background_1.jpg')
-        size: cover
-        position: center center
-        attachment: fixed
-    height: 100vh
-    overflow: hidden
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
+    header
+        background:
+            image: url('../img/background_1.jpg')
+            size: cover
+            position: center center
+            attachment: fixed
+        height: 100vh
+        overflow: hidden
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
 
-    .content
-        padding: 0 !important
+        .content
+            padding: 0 !important
 
-    .head
-        height: 100%
-        background-color: $head-darken
-        animation: lighten 14s ease-in-out infinite
+        .head
+            height: 100%
+            background-color: $head-darken
+            animation: lighten 14s ease-in-out infinite
 
-        .rapunzel
-            //display: flex
-            //align-items: center
-            //justify-content: center
-            position: relative
-            color: white
-            transform-origin: center center
+            .rapunzel
+                //display: flex
+                //align-items: center
+                //justify-content: center
+                position: relative
+                color: white
+                transform-origin: center center
 
-            img
-                width: em(500px)
-                //background:
-                    color: $logo-bg
-                //padding: 7em 5em
-                //border-radius: 50%
-                z-index: 9
-                top: 50vh
-                left: 50%
-                position: absolute
-                transform: translate(-50%,-50%)
+                img
+                    width: em(500px)
+                    //background:
+                        color: $logo-bg
+                    //padding: 7em 5em
+                    //border-radius: 50%
+                    z-index: 9
+                    top: 50vh
+                    left: 50%
+                    position: absolute
+                    transform: translate(-50%,-50%)
 
-            #systole, #diastole
-                display: inline-block
-                position: absolute
-                box-sizing: border-box
-                width: 105px
-                height: 105px
-                z-index: 1001
-                opacity: 0
-                border-radius: 50%
-                top: 50vh
-                left: 50%
-                position: absolute
-                transform: translate(-50%,-50%)
-                transform-origin: top left
-
-            #diastole
-                background-color: $pulse-dark
-                animation: diastole 4s ease-in-out 0s infinite
-
-            #systole
-                background-color: $pulse
-                animation: systole 4s ease-in-out 0s infinite
-
-            h1
-                font-size: 3rem
-                font-weight: 100
-                display: inline-block
-                border-top: 1px solid rgba(255,255,255,0.5)
-                z-index: 5
-                letter-spacing: 0.2rem
-                text-shadow: $mute 2px 2px 2px
-
-                //.mirror
-                    transform: scaleX(-1)
-                    -moz-transform: scaleX(-1)
-                    -webkit-transform: scaleX(-1)
+                #systole, #diastole
                     display: inline-block
-                    margin-right: 1rem
+                    position: absolute
+                    box-sizing: border-box
+                    width: 105px
+                    height: 105px
+                    z-index: 1001
+                    opacity: 0
+                    border-radius: 50%
+                    top: 50vh
+                    left: 50%
+                    position: absolute
+                    transform: translate(-50%,-50%)
+                    transform-origin: top left
 
-    .dig
-        height: 36px
-        width: 36px
-        position: absolute
-        top: 90vh
-        display: inline-block
-        left: 50%
-        margin-left: -18px
-        +transition()
-        z-index: 100
+                #diastole
+                    background-color: $pulse-dark
+                    animation: diastole 4s ease-in-out 0s infinite
 
-        &:hover
-            top: 89vh
+                #systole
+                    background-color: $pulse
+                    animation: systole 4s ease-in-out 0s infinite
+
+                h1
+                    font-size: 3rem
+                    font-weight: 100
+                    display: inline-block
+                    border-top: 1px solid rgba(255,255,255,0.5)
+                    z-index: 5
+                    letter-spacing: 0.2rem
+                    text-shadow: $mute 2px 2px 2px
+
+                    //.mirror
+                        transform: scaleX(-1)
+                        -moz-transform: scaleX(-1)
+                        -webkit-transform: scaleX(-1)
+                        display: inline-block
+                        margin-right: 1rem
+
+        .dig
+            height: 36px
+            width: 36px
+            position: absolute
+            top: 90vh
+            display: inline-block
+            left: 50%
+            margin-left: -18px
             +transition()
+            z-index: 100
 
-        &:after
-            content: 'our music'
-            color: white
-            position: relative
-            left: 2.5rem
-            top: -2.9rem
-            display: block
-            width: 3rem
+            &:hover
+                top: 89vh
+                +transition()
+
+            &:after
+                content: 'our music'
+                color: white
+                position: relative
+                left: 2.5rem
+                top: -2.9rem
+                display: block
+                width: 3rem
 
 @keyframes systole
     0%
