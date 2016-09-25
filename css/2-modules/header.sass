@@ -1,40 +1,14 @@
-.logo
-    position: fixed
-    left: 2rem
-    top: 1rem
-    z-index: 10001
-    width: auto
-    height: auto
-
-    svg
-        position: fixed
-        width: em(300px)
-        //opacity: 0.4
-        background: black
-        //transform: scale(1)
-        //+transition(transform 0.3s ease-in-out)
-        +transition(width 0.2s ease-in-out, background 0.2s ease-in-out)
-
-        //g
-            #a
-                .a
-                    line
-                        .b
-                            stroke: fuchsia
-                            +transition(stroke 0.2s ease-in-out)
-
 .header-wrapper
-    top: 0px
-    right: 0px
-    bottom: 0px
-    left: 0px
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
 
     header
         background:
             image: url('../img/background_1.jpg')
             size: cover
             position: center center
-            attachment: fixed
         height: 100vh
         overflow: hidden
         top: 0
@@ -51,19 +25,11 @@
             animation: lighten 14s ease-in-out infinite
 
             .rapunzel
-                //display: flex
-                //align-items: center
-                //justify-content: center
                 position: relative
                 color: white
                 transform-origin: center center
 
                 img
-                    width: em(500px)
-                    //background:
-                        color: $logo-bg
-                    //padding: 7em 5em
-                    //border-radius: 50%
                     z-index: 9
                     top: 50vh
                     left: 50%
@@ -73,25 +39,20 @@
                 #systole, #diastole
                     display: inline-block
                     position: absolute
-                    box-sizing: border-box
-                    width: 105px
-                    height: 105px
+                    box-sizing: content-box
                     z-index: 1001
-                    opacity: 0
+                    opacity: 0.2
                     border-radius: 50%
                     top: 50vh
                     left: 50%
                     position: absolute
                     transform: translate(-50%,-50%)
                     transform-origin: top left
+                    border: 1px white solid
 
                 #diastole
-                    background-color: $pulse-dark
-                    animation: diastole 4s ease-in-out 0s infinite
-
-                #systole
-                    background-color: $pulse
-                    animation: systole 4s ease-in-out 0s infinite
+                    //background-color: $pulse-dark
+                    animation: pulse 2s ease-in-out infinite
 
                 h1
                     font-size: 3rem
@@ -101,13 +62,6 @@
                     z-index: 5
                     letter-spacing: 0.2rem
                     text-shadow: $mute 2px 2px 2px
-
-                    //.mirror
-                        transform: scaleX(-1)
-                        -moz-transform: scaleX(-1)
-                        -webkit-transform: scaleX(-1)
-                        display: inline-block
-                        margin-right: 1rem
 
         .dig
             height: 36px
@@ -122,42 +76,16 @@
 
             &:hover
                 top: 89vh
-                +transition()
+                //+transition(top)
 
             &:after
                 content: 'our music'
                 color: white
                 position: relative
                 left: 2.5rem
-                top: -2.9rem
+                top: -2.15rem
                 display: block
-                width: 3rem
-
-@keyframes systole
-    0%
-        opacity: 0
-
-    20%
-        opacity: 0.5
-
-    40%
-        opacity: 0
-        transform: scale(2) translate(-50%,-50%)
-
-@keyframes diastole
-    13%
-        opacity: 0
-        transform: scale(1) translate(-50%,-50%)
-
-    33%
-        opacity: 0.5
-
-    43%
-        transform: scale(4) translate(-50%,-50%)
-
-    53%
-        opacity: 0
-        transform: scale(12) translate(-50%,-50%)
+                width: 4.5rem
 
 @keyframes lighten
     0%
@@ -171,3 +99,24 @@
 
     100%
         background-color: $head-darken
+
+@keyframes pulse
+    0%
+        border-width : 1px
+        opacity: 0.2
+
+    20%
+        border-width: 15px
+        opacity: 0.2
+
+    25%
+        border-width: 5px
+        opacity: 0.2
+
+    40%
+        border-width: 25px
+        opacity: 0.4
+
+    55%
+        border-width: 1px
+        opacity: 0.2

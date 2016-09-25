@@ -1,18 +1,52 @@
-@media screen and (max-width: 1250px)
-    .logo
-        position: absolute
-        //left: 2rem
-        top: 1rem
-        left: 50%
-        transform: translateX(-50%)
+@media screen and (min-width: 1250px)
+    .header-wrapper
+        header
+            background-attachment: fixed
 
-        svg
-            position: absolute
-            width: em(250)
-            left: 50%
-            transform: translateX(-50%)
+    .full-3
+        background-attachment: fixed
 
-@media screen and (min-width: 818px)
+@media screen and (max-width: 666px)
+    .rapunzel
+        img
+            width: em(300px)
+
+        #systole, #diastole
+            width: em(59px)
+            height: em(59px)
+
+    @keyframes pulse
+        0%
+            border-width : 1px
+            opacity: 0.2
+
+        20%
+            border-width: 13px
+            opacity: 0.2
+
+        25%
+            border-width: 3px
+            opacity: 0.2
+
+        40%
+            border-width: 18px
+            opacity: 0.4
+
+        55%
+            border-width: 1px
+            opacity: 0.2
+
+@media screen and (min-width: 666px)
+    .rapunzel
+        img
+            width: em(500px)
+
+        #systole, #diastole
+            width: em(105px)
+            height: em(105px)
+
+
+@media screen and (max-width: 818px)
     .social
         a
             &:hover
@@ -22,7 +56,6 @@
                 opacity: 0.8
 
 @media screen and (max-width: 818px)
-
     .full-1
         .content
             a
@@ -65,7 +98,6 @@
     .full-3
         padding: 2rem 0
         background:
-            size: contain
             position: center bottom
 
         .mail-wrap
@@ -98,26 +130,23 @@
                 section
                     margin-top: 11rem
 
-            .annika
-                //background-position: -200px 0
-            .mathis
-                //background-position: -400px 0
         .desc
             padding: 0 1em
 
     .full-3
         padding: 2rem 0
         background:
-            size: cover
             position: center top
-            attachment: fixed
 
-@media screen and (max-width: 399px)
+        .mail-wrap
+            font-size: 1.5rem
+
+//@media screen and (max-width: 399px)
     header
         .head
             .rapunzel
                 img
                     width: em(150px)
-                    
-                h1
+
+                //h1
                     font-size: 2rem
