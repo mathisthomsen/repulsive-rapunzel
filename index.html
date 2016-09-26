@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Kenopia</title>
+    <title>Kenopia – Music</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <meta name="description" content="content">
+    <meta name="description" content="♫ Kenopia is a rockband from Bonn, Germany. Watch our current video "sleep again" and stay tuned for upcoming gigs. ">
+    <meta property=”og:title” content=”Kenopia” />
+    <meta property=”og:type” content=”website” />
+    <meta property=”og:description” content=”Kenopia is the band of Annika, Ramon and Mathis. Check out our music, videos and pictures. Soon you will also find upcoming gigs here” />
+    <meta property=”og:image” content=”https://www.kenopia.de/img/kenopia_og.jpg” />
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,400' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 
 <body>
-    <div class="content-wrap">
+    <div class="content-wrap" itemscope itemtype="http://schema.org/MusicGroup">
 
         <div class="full-width">
 
@@ -20,7 +25,7 @@
                 <header style="padding: 0" id="start">
                     <div class="head">
                         <div class="rapunzel">
-                            <img src='../img/logo-kenopia-3.svg' alt="Kenopia Logo" />
+                            <img src='../img/logo-kenopia-3.svg' alt="Kenopia Logo" itemprop="image"/>
                             <span id="diastole"></span>
                         </div>
                     </div>
@@ -36,12 +41,25 @@
                 </header>
 
             </div>
+            <div class="full">
+                <div class="h1-wrapper">
 
-            <div class="full-1" id="video">
+                    <h1 itemprop="name">Kenopia</h1>
+                    <section class="h1-members">
+                        <span>ramon</span>
+                        <span>mathis</span>
+                        <span>annika</span>
+                    </section>
+
+
+                </div>
+            </div>
+
+            <div class="full-1" id="video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
                 <section class="content">
 
                     <div class="vid-underline">
-                        <h2>“sleep again”</h2>
+                        <h2 itemprop="name">“sleep again”</h2>
                     </div>
 
                     <div class="youtube-container" id="vid-container">

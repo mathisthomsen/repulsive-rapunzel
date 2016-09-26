@@ -1586,6 +1586,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/band.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 99933,
+		"inputAbbreviatedPath": "\/img\/band.jpg",
+		"outputAbbreviatedPath": "\/img\/band.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/contact-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1593,6 +1604,17 @@
 		"initialSize": 187410,
 		"inputAbbreviatedPath": "\/img\/contact-bg.jpg",
 		"outputAbbreviatedPath": "\/img\/contact-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/kenopia_og.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 81842,
+		"inputAbbreviatedPath": "\/img\/kenopia_og.jpg",
+		"outputAbbreviatedPath": "\/img\/kenopia_og.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
