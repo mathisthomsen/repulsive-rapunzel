@@ -1630,6 +1630,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/youtube-thumb.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 58119,
+		"inputAbbreviatedPath": "\/img\/youtube-thumb.jpg",
+		"outputAbbreviatedPath": "\/img\/youtube-thumb.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/impressum.html": {
 		"fileType": 8192,
 		"ignore": 0,
