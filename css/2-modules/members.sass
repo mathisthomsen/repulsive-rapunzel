@@ -13,6 +13,45 @@
         &:before, &:after
             background-color: $white-opac
 
+    .accordeon
+
+        .accordeon-link
+            text-align: center
+
+            h3
+                color: $white-opac
+                text-align: center
+                padding-bottom: 1rem
+                font-weight: 100
+                font-size: 1.2rem
+                display: inline-block
+                text-align: center
+                cursor: pointer
+
+
+            svg
+                //display: inline
+                width: 1rem
+                top: 0.7rem
+                left: 0.5rem
+                position: relative
+                opacity: 0.5
+                transform: rotate(0deg)
+                transition: all ease-in-out 0.5s
+                transform-origin: center center
+                cursor: pointer
+
+            &.down
+                svg
+                    transform: rotate(180deg)
+
+        .desc
+            color: white
+            max-width: $width * 0.5px
+            text-align: center
+            line-height: 1.5em
+            margin: 0 auto 3rem auto
+            position: relative
 
     .flex
         display: flex
@@ -39,8 +78,9 @@
 
                 h3
                     text-align: center
-                    font-weight: 400
+                    font-weight: 100
                     padding-bottom: 0.4rem
+                    color: $mute
 
                 p
                     text-align: center
@@ -108,11 +148,3 @@
                     color: white
                     repeat: no-repeat
                     size: 200px 200px
-
-    .desc
-        color: white
-        max-width: $width * 0.5px
-        text-align: center
-        line-height: 1.5em
-        margin: 0 auto 3rem auto
-        position: relative

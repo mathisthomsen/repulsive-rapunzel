@@ -191,3 +191,12 @@ $(window).scroll(function(){
     }
 });
 });
+
+//Accordeon=============================
+
+ //$(".accordeon-link").click().next().toggle();
+ $( ".accordeon-link" ).click(function() {
+    console.log("klick");
+   $(this).next("p").fadeToggle();
+   $(this).toggleClass("down");
+});
