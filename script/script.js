@@ -199,3 +199,12 @@ $(window).scroll(function(){
    $(this).next("p").fadeToggle();
    $(this).toggleClass("down");
 });
+
+//Map-Link==============================
+$(".place-link").click(function(){
+    var placeid=$(this).data('place');
+    var map= $('.map').attr("src");
+    $('.map').attr("src", "https://www.google.com/maps/embed/v1/place?key=AIzaSyCL29v-kehD_tbzAn3yIHpZh0Xpha6cW7A	&q=" + placeid + "&zoom=13");
+    console.log(placeid);
+    console.log(map);
+});
