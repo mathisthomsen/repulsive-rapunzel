@@ -30,10 +30,10 @@ h2
     overflow: hidden
     text-align: center
     font-size: 1.8rem
-    font-weight: 400
+    font-weight: 100
+    padding: 1.5rem 0 2rem 0
 
     &:before, &:after
-        background-color: $mute
         opacity: 0.3
         content: ""
         display: inline-block
@@ -50,12 +50,24 @@ h2
         left: 0.5em
         margin-right: -50%
 
+    &.pale
+        color: $white-opac
+
+        &:before, &:after
+            background-color: $white-opac
+
+    &.dark
+        color: $mute
+
+        &:before, &:after
+            background-color: $mute
+
 
 .full-width
     width: 100%
     z-index: 100
 
-.full-1, .full-2, .full-3
+.full-1, .full-1_5, .full-2, .full-3
     padding-bottom: 1rem
     z-index: 10
 

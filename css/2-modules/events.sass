@@ -1,0 +1,47 @@
+.full-1_5
+    background-color: $full-light
+
+    .content
+        padding-bottom: 3rem
+
+        //h2
+            color: white
+
+        .event-wrapper
+            width: 80%
+            margin: 0 auto
+
+            .event-list
+
+                .event
+                    list-style-type: none
+                    font-weight: 300
+                    border: 1px solid white
+                    padding: 1rem
+                    margin: 0 0 1rem 0
+
+                    &:last-child
+                        margin: 0
+
+                    h3
+                        font-size: 1.4rem
+                        padding: 0 0 0.1rem 0
+
+                    .details
+
+                        p
+                            display: inline-block
+                            padding: 0 0 1rem 0
+                            font-size: 0.8rem
+                            font-weight: 400
+                            color: $mute
+
+                            &:after
+                                content: " // "
+                                color: white
+                                font-weight: 300
+
+                            &:last-child
+
+                                &:after
+                                    content: none
