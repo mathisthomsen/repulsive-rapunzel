@@ -204,7 +204,15 @@ $(window).scroll(function(){
 $(".place-link").click(function(){
     var placeid=$(this).data('place');
     var map= $('.map').attr("src");
-    $('.map').attr("src", "https://www.google.com/maps/embed/v1/place?key=AIzaSyCL29v-kehD_tbzAn3yIHpZh0Xpha6cW7A	&q=" + placeid + "&zoom=13");
+    //$('.map').attr("src", "https://www.google.com/maps/embed/v1/place?key=AIzaSyCL29v-kehD_tbzAn3yIHpZh0Xpha6cW7A	&q=" + placeid + "&zoom=13");
+        $('.map-spinner').show();
+        $('.map').hide();
+        $('.map').attr("src", "https://www.google.com/maps/embed/v1/place?key=AIzaSyCL29v-kehD_tbzAn3yIHpZh0Xpha6cW7A	&q=" + placeid + "&zoom=13");
+        $( "iframe" ).load(function() {
+            $('.map').show();
+            $('.map-spinner').hide();
+        });
+
     console.log(placeid);
     console.log(map);
 });
