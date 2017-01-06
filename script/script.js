@@ -200,19 +200,305 @@ $(window).scroll(function(){
    $(this).toggleClass("down");
 });
 
-//Map-Link==============================
-$(".place-link").click(function(){
-    var placeid=$(this).data('place');
-    var map= $('.map').attr("src");
-    //$('.map').attr("src", "https://www.google.com/maps/embed/v1/place?key=AIzaSyCL29v-kehD_tbzAn3yIHpZh0Xpha6cW7A	&q=" + placeid + "&zoom=13");
-        $('.map-spinner').show();
-        $('.map').hide();
-        $('.map').attr("src", "https://www.google.com/maps/embed/v1/place?key=AIzaSyCL29v-kehD_tbzAn3yIHpZh0Xpha6cW7A	&q=" + placeid + "&zoom=13");
-        $( "iframe" ).load(function() {
-            $('.map').show();
-            $('.map-spinner').hide();
-        });
+//Map================================
 
-    console.log(placeid);
-    console.log(map);
+var map;
+var center = {lat: 50.73743, lng: 7.0982068};
+var zoom = 11;
+var koorLav = {lat: 50.7372326, lng: 7.085939000000053};
+var koorSession={lat: 50.73280150000001, lng: 7.099229100000002};
+function initMap() {
+    var mapOptions = {
+        zoom: zoom,
+        center: center,
+        disableDefaultUI: true,
+        draggable: true,
+        zoomControl: true,
+        scrollwheel: true,
+        styles : [
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.neighborhood",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#ffffff"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "labels",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#dadada"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#c9c9c9"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          }
+        ]
+      }
+    map = new google.maps.Map(document.getElementById('map'),
+    mapOptions);
+    var image = 'img/map-loc.png';
+
+    //Setting InfoWindows
+    var infoTextSession = '<h3>Session</h3>' + '<p>Am Bahnhof 666</p>' + '<a href="https://maps.google.com" target="_blank">Route planen</a>';
+    var infowindowSession = new google.maps.InfoWindow({
+        content: infoTextSession
+      });
+    var infoTextLaVictoria = '<h3>La Victoria</h3>' + '<p>Bornheimer Str. 666</p>' + '<a href="https://maps.google.com" target="_blank">Route planen</a>';
+    var infowindowLaVictoria = new google.maps.InfoWindow({
+          content: infoTextLaVictoria
+    });
+
+    //Marker Session
+    var markerSession = new google.maps.Marker({
+        position: koorSession,
+        map: map,
+        title: 'Session',
+        icon: image
+     });
+    markerSession.addListener('click', function() {
+        infowindowSession.open(map, markerSession);
+        map.setZoom(14);
+        map.setCenter(markerSession.getPosition());
+    });
+
+    //Marker La Victoria
+    var markerLaVictoria = new google.maps.Marker({
+        position: koorLav,
+        map: map,
+        title: 'La Victoria',
+        icon: image
+        });
+    markerLaVictoria.addListener('click', function() {
+        infowindowLaVictoria.open(map, markerLaVictoria);
+        map.setZoom(14);
+        map.setCenter(markerLaVictoria.getPosition());
+    });
+}
+
+
+//Map-Links============================
+$('.place-link').click(function(){
+    infowindowLaVictoria.open(map, markerLaVictoria);
+    map.setZoom(14);
+    map.setCenter(markerLaVictoria.getPosition());
 });
