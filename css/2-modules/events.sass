@@ -1,0 +1,142 @@
+.full-1_5
+    background-color: $full-odd
+
+    .content
+        padding-bottom: 3rem
+
+        @media screen and (mix-width: 800px)
+            padding: 0
+
+        .intro
+            width: 50%
+            color: $white-opac
+            text-align: center
+            display: block
+            margin: 0 auto 2rem auto
+
+            @media screen and (max-width: 800px)
+                width: 100%
+
+            a
+                color: $white-opac
+                text-decoration: underline
+
+
+        .event-wrapper
+            //width: 80%
+            margin: 0 auto
+            display: flex
+            flex-flow: column
+            //justify-content: center
+            align-items: center
+
+            .event-list
+                text-align: center
+                margin: 0 0 1rem 0
+                display: flex
+                flex-flow: row
+                flex-wrap: wrap
+                justify-content: space-between
+                align-items: flex-start
+
+                @media screen and (max-width: 800px)
+                    padding: 0 16px
+
+                @media screen and (max-width: 441px)
+                    flex-flow: column
+                    width: 100%
+
+                .event
+                    background-color: $white-opac
+                    list-style-type: none
+                    font-weight: 300
+                    width: 48%
+                    border: 1px solid $white-opac
+                    padding: 1rem
+                    margin-bottom: 1rem
+                    box-shadow: 3px 3px 6px $mute-dark
+
+                    &:last-child
+                        margin: 0
+
+                    @media screen and (max-width: 441px)
+                        width: 100%
+
+                    .details
+                        display: flex
+                        flex-flow: column
+                        align-items: center
+                        justify-content: flex-start
+
+                        .loc
+                            padding-bottom: 1rem
+
+                            p
+                                display: inline-block
+                                font-size: 1rem
+                                font-weight: 400
+                                color: $mute
+
+                                &:nth-child(1), &:nth-child(2)
+                                    &:after
+                                        content: " // "
+                                        color: $mute
+                                        font-weight: 300
+
+
+                        a
+                            justify-self: flex-end
+
+                            &:focus
+                                outline: none
+
+                            button
+                                outline: none
+                                border: 1px solid $mute-dark
+                                border-radius: 8px
+                                background-color: inherit
+                                color: $mute
+                                padding: 0.8em
+                                display: block
+                                text-align: center
+                                margin: 0.5em auto
+                                font-size: 1rem
+                                //box-shadow: 0 0 2px 1px $mute
+                                cursor: pointer
+                                transition: box-shadow 100ms ease-in-out
+
+                                @media screen and (min-width: 800px)
+                                    &:hover
+                                        box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $highlight
+                                        -webkit-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $highlight
+                                        -moz-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $highlight
+
+
+                                //&:active
+                                    box-shadow: 0 0 1px 1px $mute
+
+                                &:focus
+                                    outline: none
+
+                                @media screen and (max-width: 800px)
+
+
+            .map-wrapper
+                box-sizing: border-box
+                width: 100%
+                height: 300px
+
+                #map
+                    width: 100%
+                    height: 100%
+
+                    h3
+                        .info
+                            font-size: 1.5rem
+
+            @media screen and (min-width: 800px)
+                padding: 0 16px
+
+            @media screen and (max-width: 800px)
+                width: 100vw
+                transform: translate(-16px,0)

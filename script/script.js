@@ -9,109 +9,25 @@ $(document).ready(function(){
         p.onclick = labnolIframe;
         v[n].appendChild(p);
     }
-})();
+    })();
 
-function labnolThumb(id) {
-    return '<img class="youtube-thumb" src="../img/youtube-thumb.jpg"><div class="play-button material-icons"></div>';
-}
-
-function labnolIframe() {
-    $('.spinner').show();
-    var iframe = document.createElement("iframe");
-    iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=1&showinfo=0");
-    iframe.setAttribute("frameborder", "0");
-    iframe.setAttribute("id", "youtube-iframe");
-    this.parentNode.replaceChild(iframe, this);
-    $( "iframe" ).load(function() {
-        $('.spinner').hide();
-    });
-
-}
-
-//FITVIDS=======================================
-/*jshint browser:true */
-/*!
-* FitVids 1.1
-*
-* Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
-* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
-* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
-*
-*/
-/*
-;(function( $ ){
-
-  'use strict';
-
-  $.fn.fitVids = function( options ) {
-    var settings = {
-      customSelector: null,
-      ignore: null
-    };
-
-    if(!document.getElementById('fit-vids-style')) {
-      // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
-      var head = document.head || document.getElementsByTagName('head')[0];
-      var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
-      var div = document.createElement("div");
-      div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
-      head.appendChild(div.childNodes[1]);
+    function labnolThumb(id) {
+        return '<img class="youtube-thumb" src="../img/youtube-thumb.jpg"><div class="play-button material-icons"></div>';
     }
 
-    if ( options ) {
-      $.extend( settings, options );
+    function labnolIframe() {
+        $('.spinner').show();
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=1&showinfo=0");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("id", "youtube-iframe");
+        this.parentNode.replaceChild(iframe, this);
+        $( "iframe" ).load(function() {
+            $('.spinner').hide();
+        });
+
     }
 
-    return this.each(function(){
-      var selectors = [
-        'iframe[src*="player.vimeo.com"]',
-        'iframe[src*="youtube.com"]',
-        'iframe[src*="youtube-nocookie.com"]',
-        'iframe[src*="kickstarter.com"][src*="video.html"]',
-        'object',
-        'embed'
-      ];
-
-      if (settings.customSelector) {
-        selectors.push(settings.customSelector);
-      }
-
-      var ignoreList = '.fitvidsignore';
-
-      if(settings.ignore) {
-        ignoreList = ignoreList + ', ' + settings.ignore;
-      }
-
-      var $allVideos = $(this).find(selectors.join(','));
-      $allVideos = $allVideos.not('object object'); // SwfObj conflict patch
-      $allVideos = $allVideos.not(ignoreList); // Disable FitVids on this video.
-
-      $allVideos.each(function(count){
-        var $this = $(this);
-        if($this.parents(ignoreList).length > 0) {
-          return; // Disable FitVids on this video.
-        }
-        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
-        if ((!$this.css('height') && !$this.css('width')) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
-        {
-          $this.attr('height', 9);
-          $this.attr('width', 16);
-        }
-        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
-            width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
-            aspectRatio = height / width;
-        if(!$this.attr('id')){
-          var videoID = 'fitvid' + count;
-          $this.attr('id', videoID);
-        }
-        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+'%');
-        $this.removeAttr('height').removeAttr('width');
-      });
-    });
-  };
-// Works with either jQuery or Zepto
-})( window.jQuery || window.Zepto );
-*/
 
     //SCROLLING==================================
 
@@ -129,65 +45,279 @@ function labnolIframe() {
             return false;
         }
     }
-});
+    });
 
 
 //PARALLAX=============================
 
-$(window).scroll(function(){
-    var wScroll = $(this).scrollTop();
+    $(window).scroll(function(){
+        var wScroll = $(this).scrollTop();
 
-    if(wScroll >= $(window).height() && $(window).width() > 1249){
-        //console.log('hit the spot');
-        $('.logo svg').css({
-            //'transform' : 'scale(0.5)'
-            'width' : '9.375em', 'background' : 'none'
-        });
-        $('.b').css({
-            'stroke' : '#000000'
-        });
-        $('.c').css({
-            'stroke' : '#000000'
-        });
-    }
-    /*if(wScroll < $(window).height() && $(window).width() > 1249){
-        //console.log('hit the other spot');
-        $('.logo svg').css({
-            'width' : '18.75em', 'background' : 'black'
-        });
-        $('.b').css({
-            'stroke' : '#ffffff'
-        });
-        $('.c').css({
-            'stroke' : '#ffffff'
-        });
-
-    }
-*/
-    /*if(wScroll <= $('#start').height() && $(window).width() > 420){
-            //$('.logo').css({
-                //'transform' : 'translate(0px, '+ wScroll /5 +'%)', 'opacity' :0.6 -wScroll /700
-            //});
-            $('.rapunzel').css({
-                'transform' : 'translate(0px, '+ wScroll /1.7 + '%)'
+        if(wScroll >= $(window).height() && $(window).width() > 1249){
+            $('.logo svg').css({
+                'width' : '9.375em', 'background' : 'none'
             });
-            $('.dig').css({
-                'opacity' : 1 -wScroll /300
+            $('.b').css({
+                'stroke' : '#000000'
+            });
+            $('.c').css({
+                'stroke' : '#000000'
             });
         }
-*/
-    if(wScroll > $('.flex').offset().top - $(window).height() && $(window).width() > 769){
 
-        var offset = Math.min(0, wScroll - $('.flex').offset().top + $(window).height() - 400);
+        if(wScroll > $('.flex').offset().top - $(window).height() && $(window).width() > 769){
 
-        $('.ramon').css({
-            'transform' : 'translate(' + offset + 'px, 0px)'
+            var offset = Math.min(0, wScroll - $('.flex').offset().top + $(window).height() - 400);
+
+            $('.ramon').css({
+                'transform' : 'translate(' + offset + 'px, 0px)'
+            });
+
+            $('.mathis').css({
+                'transform' : 'translate(' + Math.abs(offset) + 'px, 0px)'
+            });
+
+        }
+    });
+
+
+//Accordeon=============================
+
+     $( ".accordeon-link" ).click(function() {
+       $(this).next("p").fadeToggle();
+       $(this).toggleClass("down");
+    });
+});
+
+//Map================================
+
+    var map;
+    var center = {lat: 50.73743, lng: 7.0982068};
+    var zoom = 11;
+    var koorLav = {lat: 50.7372326, lng: 7.085939000000053};
+    var koorSession={lat: 50.73280150000001, lng: 7.099229100000002};
+    function initMap() {
+        var mapOptions = {
+            zoom: zoom,
+            center: center,
+            disableDefaultUI: true,
+            draggable: true,
+            zoomControl: true,
+            scrollwheel: true,
+            styles : [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c9c9c9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  }
+]
+        };
+        map = new google.maps.Map(document.getElementById('map'),
+        mapOptions);
+        var image = 'img/map-loc.png';
+
+        //Setting InfoWindows
+        var infoTextSession = '<h3 class="info">Session</h3>' + '<p>Gerhard-von-Are-Straße 4</p>' + '<p>53111 Bonn</p>'+ '<a href="https://www.facebook.com/events/221786924894725" target="_blank">Facebook</a>';
+        var infowindowSession = new google.maps.InfoWindow({
+            content: infoTextSession
+          });
+        var infoTextLaVictoria = '<h3>La Victoria</h3>' + '<p>Bornheimer Str. 57</p>' + '<p>53119 Bonn</p>' + '<a href="https://www.facebook.com/events/1731164677197666/" target="_blank">Facebook</a>';
+        var infowindowLaVictoria = new google.maps.InfoWindow({
+              content: infoTextLaVictoria
         });
 
-        $('.mathis').css({
-            'transform' : 'translate(' + Math.abs(offset) + 'px, 0px)'
+        //Marker Session
+        var markerSession = new google.maps.Marker({
+            position: koorSession,
+            map: map,
+            title: 'Session',
+            icon: image
+         });
+        markerSession.addListener('click', function() {
+            infowindowSession.open(map, markerSession);
+            map.setZoom(14);
+            map.setCenter(markerSession.getPosition());
         });
 
+        //Marker La Victoria
+        var markerLaVictoria = new google.maps.Marker({
+            position: koorLav,
+            map: map,
+            title: 'La Victoria',
+            icon: image
+            });
+        markerLaVictoria.addListener('click', function() {
+            infowindowLaVictoria.open(map, markerLaVictoria);
+            map.setZoom(14);
+            map.setCenter(markerLaVictoria.getPosition());
+        });
+
+        //Add Link
+        $('#session').click(function(){
+            infowindowSession.open(map, markerSession);
+            map.setZoom(14);
+            map.setCenter(markerSession.getPosition());
+        });
+
+        $('#laVictoria').click(function(){
+            infowindowLaVictoria.open(map, markerLaVictoria);
+            map.setZoom(14);
+            map.setCenter(markerLaVictoria.getPosition());
+        });
     }
-});
-});
+
+
+//Map-Links============================
