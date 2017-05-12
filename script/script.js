@@ -270,11 +270,11 @@ $(document).ready(function(){
         var image = 'img/map-loc.png';
 
         //Setting InfoWindows
-        var infoTextSession = '<h3 class="info">Session</h3>' + '<p>Am Bahnhof 666</p>' + '<a href="https://maps.google.com" target="_blank">Route planen</a>';
+        var infoTextSession = '<h3 class="info">Session</h3>' + '<p>Gerhard-von-Are-Straße 4</p>' + '<p>53111 Bonn</p>'+ '<a href="https://www.facebook.com/events/221786924894725" target="_blank">Facebook</a>';
         var infowindowSession = new google.maps.InfoWindow({
             content: infoTextSession
           });
-        var infoTextLaVictoria = '<h3>La Victoria</h3>' + '<p>Bornheimer Str. 666</p>' + '<a href="https://maps.google.com" target="_blank">Route planen</a>';
+        var infoTextLaVictoria = '<h3>La Victoria</h3>' + '<p>Bornheimer Str. 57</p>' + '<p>53119 Bonn</p>' + '<a href="https://www.facebook.com/events/1731164677197666/" target="_blank">Facebook</a>';
         var infowindowLaVictoria = new google.maps.InfoWindow({
               content: infoTextLaVictoria
         });

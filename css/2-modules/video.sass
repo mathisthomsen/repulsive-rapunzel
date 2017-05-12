@@ -21,6 +21,10 @@
     max-width: 900px
     position: relative
 
+    @media screen and (max-width: 800px)
+        width: 100vw
+        transform: translate(-16px,0)
+
     .youtube-player
         display: block
         width: 100%
@@ -76,20 +80,20 @@ div.play-button
     color: $mute
 
 .btn
-    width: 9rem
+    width: 10rem
     display: flex
     align-items: center
     justify-content: center
     background: inherit
     border: 1px solid $mute-dark
-    margin: 3rem auto 1rem auto
+    margin: 2rem auto 0 auto
     color: $mute-dark
     border-radius: 8px
     padding: 0 0.8rem
     cursor: pointer
 
     .label
-        padding-right: 1rem
+        padding-right: 0.5rem
         font-size: 0.9rem
 
     .symbol

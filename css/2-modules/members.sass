@@ -1,6 +1,6 @@
 .full-2
     width: 100%
-    background-color: $full-odd
+    background-color: $white-opac
     overflow: hidden
     box-shadow: 0px 0px 3px $shadow
 
@@ -16,7 +16,7 @@
             text-align: center
 
             h3
-                color: $white-opac
+                color: $mute
                 text-align: center
                 padding-bottom: 1rem
                 font-weight: 100
@@ -43,7 +43,7 @@
                     transform: rotate(180deg)
 
         .desc
-            color: white
+            color: $mute
             max-width: $width * 0.5px
             text-align: center
             line-height: 1.5em
@@ -61,23 +61,24 @@
             width: 200px
             height: 200px
             border-radius: 50%
-            box-shadow: 0px 0px 0px 6px $mute, 0px 0px 0px 8px white
+            box-shadow: 0px 0px 0px 6px $white-opac , 0px 0px 0px 8px $mute
             display: flex
             align-items: center
             justify-content: center
 
             section
-                color: rgba(0,0,0,1)
+                color: $white-opac
                 border-radius: 10px
                 padding: 0.4rem 1.5rem
-                background-color: rgba(255,255,255,0.7)
+                background-color: $mute-transp
                 margin-top: 13rem
 
                 h3
                     text-align: center
-                    font-weight: 300
+                    letter-spacing: 2px
+                    font-weight: 100
                     padding-bottom: 0.4rem
-                    color: black
+                    //color: $mute
 
                 p
                     text-align: center
