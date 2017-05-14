@@ -1,18 +1,54 @@
 .full-2
     width: 100%
-    color: black
-    background-color: $full-odd
+    background-color: $white-opac
     overflow: hidden
-    box-shadow: 0px -1px 5px black
+    box-shadow: 0px 0px 3px $shadow
 
-    h2
+    //h2
         color: $white-opac
-        font-weight: 100
-        padding: 1.5rem 0 2rem 0
 
-        &:before, &:after
+        //&:before, &:after
             background-color: $white-opac
 
+    .accordeon
+
+        .accordeon-link
+            text-align: center
+
+            h3
+                color: $mute
+                text-align: center
+                padding-bottom: 1rem
+                font-weight: 100
+                font-size: 1.2rem
+                display: inline-block
+                text-align: center
+                cursor: pointer
+
+
+            svg
+                //display: inline
+                width: 1rem
+                top: 0.7rem
+                left: 0.5rem
+                position: relative
+                opacity: 0.3
+                transform: rotate(0deg)
+                transition: all ease-in-out 0.5s
+                transform-origin: center center
+                cursor: pointer
+
+            &.down
+                svg
+                    transform: rotate(180deg)
+
+        .desc
+            color: $mute
+            max-width: $width * 0.5px
+            text-align: center
+            line-height: 1.5em
+            margin: 0 auto 3rem auto
+            position: relative
 
     .flex
         display: flex
@@ -25,22 +61,24 @@
             width: 200px
             height: 200px
             border-radius: 50%
-            box-shadow: 0px 0px 0px 6px $mute, 0px 0px 0px 8px white
+            box-shadow: 0px 0px 0px 6px $white-opac , 0px 0px 0px 8px $mute
             display: flex
             align-items: center
             justify-content: center
 
             section
-                color: rgba(0,0,0,1)
-                border-radius: 10px
+                color: $white-opac
+                //border-radius: 10px
                 padding: 0.4rem 1.5rem
-                background-color: rgba(255,255,255,0.7)
+                background-color: $mute-transp
                 margin-top: 13rem
 
                 h3
                     text-align: center
-                    font-weight: 400
+                    letter-spacing: 2px
+                    font-weight: 100
                     padding-bottom: 0.4rem
+                    //color: $mute
 
                 p
                     text-align: center
@@ -108,11 +146,3 @@
                     color: white
                     repeat: no-repeat
                     size: 200px 200px
-
-    .desc
-        color: white
-        max-width: $width * 0.5px
-        text-align: center
-        line-height: 1.5em
-        margin: 0 auto 3rem auto
-        position: relative
