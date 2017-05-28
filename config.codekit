@@ -1673,17 +1673,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/gallery\/session01.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 107802,
-		"inputAbbreviatedPath": "\/img\/gallery\/session01.jpg",
-		"outputAbbreviatedPath": "\/img\/gallery\/session01.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/gallery\/session02.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1691,39 +1680,6 @@
 		"initialSize": 56037,
 		"inputAbbreviatedPath": "\/img\/gallery\/session02.jpg",
 		"outputAbbreviatedPath": "\/img\/gallery\/session02.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/gallery\/session03.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 123504,
-		"inputAbbreviatedPath": "\/img\/gallery\/session03.jpg",
-		"outputAbbreviatedPath": "\/img\/gallery\/session03.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/gallery\/session04.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 159610,
-		"inputAbbreviatedPath": "\/img\/gallery\/session04.jpg",
-		"outputAbbreviatedPath": "\/img\/gallery\/session04.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/gallery\/session05.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 115221,
-		"inputAbbreviatedPath": "\/img\/gallery\/session05.jpg",
-		"outputAbbreviatedPath": "\/img\/gallery\/session05.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
