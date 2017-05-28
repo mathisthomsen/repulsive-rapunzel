@@ -87,4 +87,5 @@ $(document).ready(function(){
        $(this).next("p").fadeToggle();
        $(this).toggleClass("down");
     });
+
 });

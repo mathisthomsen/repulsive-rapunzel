@@ -1,0 +1,91 @@
+.gallery
+    display: flex
+    justify-content: center
+    flex-flow: column
+    align-items: center
+    position: relative
+    margin: 0 0 1rem 0
+    box-sizing: border-box
+    overflow: hidden
+
+    @media screen and (max-width: 800px)
+        width: 100vw
+        transform: translate(-16px,0)
+
+    .prev, .next
+        position: absolute
+        cursor: pointer
+        //background-color: $white-cthu
+
+        //&:hover
+            background-color: $mute-light-trans
+
+        svg
+            fill: white
+
+    .prev
+        top: 50%
+        transform: rotate(90deg) translate(-50%,0)
+        //margin-left: 0.5rem
+        left: 0
+        //padding: 0.2em 0.2em 0 0.2em
+
+    .next
+        top: 50%
+        transform: rotate(-90deg) translate(50%,0)
+        right: 0
+        //padding: 0.2em 0.2em 0 0.2em
+
+
+    .mySlides
+        //width: 600px
+        display: none
+
+        &.active
+            display: inline-block
+
+        img
+            &.landscape
+                //max-height: 300px
+                max-width: 100%
+            &.portrait
+                max-height: 47vw
+
+        .caption
+            font-size: 0.75em
+            text-align: center
+            color: white
+            font-weight: 100
+
+.dot-wrapper
+    //position: relative
+    //left: 50%
+    //bottom: 4rem
+    //transform: translate(-50%,0)
+
+    .dot
+        cursor: pointer
+        height: 10px
+        width: 10px
+        margin: 0 2px
+        //background-color: #bbb
+        border: 1px solid $mute-light-trans
+        border-radius: 50%
+        display: inline-block
+        transition: background-color 0.4s ease
+
+        &.active
+            //background-color: $highlight
+            border: 1px solid $highlight
+
+.fade
+    animation-name: fade
+    animation-duration: 400ms
+
+@keyframes fade
+    0%
+        opacity: .2
+        transform: scale(0.9)
+    100%
+        opacity: 1
+        transform: scale(1)

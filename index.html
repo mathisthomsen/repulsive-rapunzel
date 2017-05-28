@@ -184,6 +184,82 @@
                 </section>
             </div>
 
+            <div class="full-1_5" id="pictures">
+
+                <section class="content">
+
+                    <h2 class="pale">Bilder</h2>
+
+                    <div class="gallery">
+                        <div class="mySlides fade"><img src="/img/gallery/attic01.jpg" alt="Kenopia Gruppenfoto" class="landscape"><p class="caption">Foto von Tim Beikircher</p class="caption"></div>
+                        <div class="mySlides fade"><img src="/img/gallery/session04.jpg" alt="Kenopia im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img src="/img/gallery/session01.jpg" alt="Annika im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img src="/img/gallery/session02.jpg" alt="Ramon im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img src="/img/gallery/session03.jpg" alt="Mathis im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img src="/img/gallery/session05.jpg" alt="Kenopia im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img src="/img/gallery/session06.jpg" alt="Annika im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+
+
+                        <p class="prev" onclick="plusSlides(-1)">
+                            <svg fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 4l9 16 9-16H3zm3.38 2h11.25L12 16 6.38 6z"/>
+                            </svg>
+                        </p>
+                        <p class="next" onclick="plusSlides(1)">
+                            <svg fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 4l9 16 9-16H3zm3.38 2h11.25L12 16 6.38 6z"/>
+                            </svg>
+                        </p>
+
+                    </div>
+
+                  <div class="dot-wrapper" style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                      <span class="dot" onclick="currentSlide(4)"></span>
+                      <span class="dot" onclick="currentSlide(5)"></span>
+                      <span class="dot" onclick="currentSlide(6)"></span>
+                      <span class="dot" onclick="currentSlide(7)"></span>
+                  </div>
+
+                </section>
+
+            </div>
+
+            <script type="text/javascript">
+
+                var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1};
+                  if (n < 1) {slideIndex = slides.length};
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+              }
+
+            </script>
+
             <div class="full-3" id="contact">
                 <section class="content">
 
