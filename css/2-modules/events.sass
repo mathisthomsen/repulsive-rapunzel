@@ -3,9 +3,21 @@
 
     .content
         padding-bottom: 3rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
         @media screen and (mix-width: 800px)
             padding: 0
+
+        .no-gigs
+            color: white
+            text-align: center
+            font-weight: 100
+            border: 1px solid $white-opac
+            padding: 1rem
+            box-shadow: 0 0 15px #474848
 
         .intro
             width: 50%
@@ -63,10 +75,26 @@
                         width: 100%
 
                     .details
+                        position: relative
                         display: flex
                         flex-flow: column
                         align-items: center
                         justify-content: flex-start
+
+                        .canceled
+                            position: absolute
+                            width: 100%
+                            height: 100%
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            //background-color: $mute-light-trans
+
+
+                            p
+                                font-size: 3em
+                                color: $highlight
+
 
                         .loc
                             padding-bottom: 1rem
@@ -82,7 +110,6 @@
                                         content: " // "
                                         color: $mute
                                         font-weight: 300
-
 
                         a
                             justify-self: flex-end
@@ -105,21 +132,21 @@
                                 cursor: pointer
                                 transition: box-shadow 100ms ease-in-out
 
+                                &.deactivated
+                                    color: $mute-light
+                                    border: 1px solid $mute-light
+                                    cursor: default
+
                                 @media screen and (min-width: 800px)
-                                    &:hover
+                                    //&:hover
                                         box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $highlight
                                         -webkit-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $highlight
                                         -moz-box-shadow: 2px 2px 0px $full-even, 3px 3px 0px $highlight
 
-
-                                //&:active
-                                    box-shadow: 0 0 1px 1px $mute
+                                //@media screen and (max-width: 800px)
 
                                 &:focus
                                     outline: none
-
-                                @media screen and (max-width: 800px)
-
 
             .map-wrapper
                 box-sizing: border-box

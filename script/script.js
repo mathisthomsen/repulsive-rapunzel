@@ -12,7 +12,7 @@ $(document).ready(function(){
     })();
 
     function labnolThumb(id) {
-        return '<img class="youtube-thumb" src="../img/youtube-thumb.jpg"><div class="play-button material-icons"></div>';
+        return '<img class="youtube-thumb" src="../img/youtube-thumb-preload.jpg">';
     }
 
     function labnolIframe() {
@@ -41,7 +41,7 @@ $(document).ready(function(){
            if (target.length) {
              $('html,body').animate({
                  scrollTop: target.offset().top
-            }, 1000);
+            }, 600);
             return false;
         }
     }
@@ -52,7 +52,6 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
         var wScroll = $(this).scrollTop();
-
         if(wScroll >= $(window).height() && $(window).width() > 1249){
             $('.logo svg').css({
                 'width' : '9.375em', 'background' : 'none'
@@ -80,12 +79,71 @@ $(document).ready(function(){
         }
     });
 
+//Lazy-Loading============================
 
-//Accordeon=============================
 
-     $( ".accordeon-link" ).click(function() {
-       $(this).next("p").fadeToggle();
-       $(this).toggleClass("down");
+    var my_image = new Image();
+    my_image.src = '../img/background_1.jpg';
+
+    function notify_complete()
+    {
+        console.log('The image has been loaded into the browser cache.');
+    }
+
+    my_image.onload = function(){
+        notify_complete;
+        $("header").css({
+            "background-image" : "url('../img/background_1.jpg')"
+        });
+    };
+
+    //youtube thumb
+    $(window).scroll(function(event){
+        var wScroll = $(this).scrollTop();
+        if(wScroll >=10){
+            console.log('Height: video');
+            $('.spinner').show();
+            var my_youtube_image = new Image();
+            my_youtube_image.src = '../img/youtube-thumb.jpg';
+            my_youtube_image.onload = function(){
+                $('.youtube-thumb').attr('src','/img/youtube-thumb.jpg');
+                $('.youtube-thumb').after('<div class="play-button material-icons"></div>')
+                $('.spinner').hide();
+            };
+
+            $(this).off(event);
+        };
+    });
+
+    //gallery
+    $(window).scroll(function(event){
+        var wScroll = $(this).scrollTop();
+        if(wScroll >= $('#event').offset().top - $(window).height()){
+            console.log('Height: event');
+            $('.gallery').children().each(function() {
+                var pic = $(this).children().attr("id");
+                $(this).children().attr('src','/img/gallery/' + pic + '.jpg')
+                console.log(pic);
+            });
+            $(this).off(event);
+        };
+    });
+
+    //maps
+    $(window).scroll(function(event){
+        var wScroll = $(this).scrollTop();
+        if(wScroll >= $('#video').offset().top - $(window).height()){
+            console.log('Height: Event');
+            $('body').append('<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL29v-kehD_tbzAn3yIHpZh0Xpha6cW7A&callback=initMap"></script>')
+
+            $(this).off(event);
+        };
     });
 
 });
+
+
+
+//window.onload = function() {
+    //$('body').append('<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL29v-kehD_tbzAn3yIHpZh0Xpha6cW7A&callback=initMap"></script>')
+//};

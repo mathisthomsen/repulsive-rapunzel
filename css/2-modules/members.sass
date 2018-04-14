@@ -9,46 +9,13 @@
 
         //&:before, &:after
             background-color: $white-opac
-
-    .accordeon
-
-        .accordeon-link
-            text-align: center
-
-            h3
-                color: $mute
-                text-align: center
-                padding-bottom: 1rem
-                font-weight: 100
-                font-size: 1.2rem
-                display: inline-block
-                text-align: center
-                cursor: pointer
-
-
-            svg
-                //display: inline
-                width: 1rem
-                top: 0.7rem
-                left: 0.5rem
-                position: relative
-                opacity: 0.3
-                transform: rotate(0deg)
-                transition: all ease-in-out 0.5s
-                transform-origin: center center
-                cursor: pointer
-
-            &.down
-                svg
-                    transform: rotate(180deg)
-
-        .desc
-            color: $mute
-            max-width: $width * 0.5px
-            text-align: center
-            line-height: 1.5em
-            margin: 0 auto 3rem auto
-            position: relative
+    .seo
+        max-width: 75%
+        display: block
+        color: $mute
+        line-height: 1.5em
+        margin: 0 auto
+        position: relative
 
     .flex
         display: flex
@@ -78,11 +45,11 @@
                     letter-spacing: 2px
                     font-weight: 100
                     padding-bottom: 0.4rem
-                    //color: $mute
 
                 p
                     text-align: center
                     font-weight: 300
+                    color: inherit
 
                     &:before, &:after
                         background-color: rgba(100,100,100,0.9)

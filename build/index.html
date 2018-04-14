@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Kenopia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Die Musik von Kenopia aus Bonn beschwört eine dystopische Sehnsucht, ein vergehendes Irgendwo zwischen zerschlagenen Fenstern und verwitternden Mauern.">
+    <meta property=”og:title” content=”Kenopia” />
+    <meta property=”og:type” content=”website” />
+    <meta property=”og:description” content=”Die Musik von Kenopia aus Bonn beschwört eine dystopische Sehnsucht, ein vergehendes Irgendwo zwischen zerschlagenen Fenstern und verwitternden Mauern.” />
+    <meta property=”og:image” content=”https://www.kenopia.de/img/kenopia_og.jpg” />
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;box-sizing:border-box}.header-wrapper{top:0;right:0;bottom:0;left:0}.header-wrapper header{background-image:url("../img/background_1-preload.jpg");background-size:cover;background-position:center center;height:100vh;overflow:hidden;top:0;right:0;bottom:0;left:0}@media screen and (min-width: 1250px){.header-wrapper header{background-attachment:fixed}}.header-wrapper header .content{padding:0 !important}.header-wrapper header .head{height:100%;background-color:rgba(0,0,0,0.8);-webkit-animation:lighten 14s ease-in-out infinite;animation:lighten 14s ease-in-out infinite}.header-wrapper header .head .rapunzel{position:relative;color:white;-webkit-transform-origin:center center;transform-origin:center center}.header-wrapper header .head .rapunzel img{z-index:8;top:50vh;left:50%;position:absolute;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);opacity:0;transition:opcacity ease-in-out 200ms}@media screen and (max-width: 666px){.header-wrapper header .head .rapunzel img{width:em(300px)}}@media screen and (min-width: 666px){.header-wrapper header .head .rapunzel img{width:em(500px)}}.header-wrapper header .head .rapunzel #systole,.header-wrapper header .head .rapunzel #diastole{display:inline-block;position:absolute;box-sizing:content-box;z-index:1001;opacity:0.2;border-radius:50%;top:50vh;left:50%;position:absolute;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);-webkit-transform-origin:top left;transform-origin:top left;border:1px #fff solid}@media screen and (min-width: 666px){.header-wrapper header .head .rapunzel #systole,.header-wrapper header .head .rapunzel #diastole{width:em(105px);height:em(105px)}}@media screen and (max-width: 666px){.header-wrapper header .head .rapunzel #systole,.header-wrapper header .head .rapunzel #diastole{width:em(59px);height:em(59px)}@-webkit-keyframes pulse{0%{border-width:1px;opacity:0.2}20%{border-width:13px;opacity:0.2}25%{border-width:3px;opacity:0.2}40%{border-width:18px;opacity:0.4}55%{border-width:1px;opacity:0.2}}@keyframes pulse{0%{border-width:1px;opacity:0.2}20%{border-width:13px;opacity:0.2}25%{border-width:3px;opacity:0.2}40%{border-width:18px;opacity:0.4}55%{border-width:1px;opacity:0.2}}}.header-wrapper header .head .rapunzel #diastole{-webkit-animation:pulse 2s ease-in-out infinite;animation:pulse 2s ease-in-out infinite}.header-wrapper header .dig{height:36px;width:36px;position:absolute;top:90vh;display:inline-block;left:50%;margin-left:-18px;transition:ease-in-out 200ms;z-index:100}.header-wrapper header .dig:hover{top:89vh}.header-wrapper header .dig:after{content:'unsere musik';color:white;position:relative;left:2.5rem;top:-2.15rem;display:block;width:6rem}@-webkit-keyframes lighten{0%{background-color:rgba(0,0,0,0.8)}80%{background-color:rgba(0,0,0,0.8)}90%{background-color:rgba(0,0,0,0.1)}100%{background-color:rgba(0,0,0,0.8)}}@keyframes lighten{0%{background-color:rgba(0,0,0,0.8)}80%{background-color:rgba(0,0,0,0.8)}90%{background-color:rgba(0,0,0,0.1)}100%{background-color:rgba(0,0,0,0.8)}}@-webkit-keyframes pulse{0%{border-width:1px;opacity:0.2}20%{border-width:15px;opacity:0.2}25%{border-width:5px;opacity:0.2}40%{border-width:25px;opacity:0.4}55%{border-width:1px;opacity:0.2}}@keyframes pulse{0%{border-width:1px;opacity:0.2}20%{border-width:15px;opacity:0.2}25%{border-width:5px;opacity:0.2}40%{border-width:25px;opacity:0.4}55%{border-width:1px;opacity:0.2}}
+    </style>
+    
+    <script>
+            function loadCSS( href, before, media ){
+            "use strict";
+            // Arguments explained:
+            // `href` is the URL for your CSS file.
+            // `before` optionally defines the element we'll use as a reference for injecting our <link>
+            // By default, `before` uses the first <script> element in the page.
+            // However, since the order in which stylesheets are referenced matters, you might need a more specific location in your document.
+            // If so, pass a different reference element to the `before` argument and it'll insert before that instead
+            // note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+            var ss = window.document.createElement( "link" );
+            var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+            ss.rel = "stylesheet";
+            ss.href = href;
+            // temporarily, set media to something non-matching to ensure it'll fetch without blocking render
+            ss.media = "only x";
+            // inject link
+            ref.parentNode.insertBefore( ss, ref );
+            // set media back to `all` so that the styleshet applies once it loads
+            setTimeout( function(){
+            ss.media = media || "all";
+            } );
+            }
+        </script>
+        
+
+</head>
+
+<body>
+    <div class="content-wrap" itemscope itemtype="http://schema.org/MusicGroup">
+
+        <div class="full-width">
+
+            <div class="header-wrapper">
+
+                <header style="padding: 0" id="start">
+                    <div class="head">
+                        <div class="rapunzel">
+                            <img src='../img/logo-kenopia-3.svg' alt="Kenopia Logo" itemprop="image"/>
+                            <span id="diastole"></span>
+                        </div>
+                    </div>
+
+                     <a href="#video" >
+                        <div class="dig" style="opacity:1">
+                            <svg fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 4l9 16 9-16H3zm3.38 2h11.25L12 16 6.38 6z"/>
+                            </svg>
+                        </div>
+                     </a>
+                </header>
+
+            </div>
+
+            <div class="full-1" id="video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                <section class="content">
+
+                    <div class="vid-underline">
+                        <h2 itemprop="name" class="dark">“sleep again”</h2>
+                    </div>
+
+                    <div class="youtube-container" id="vid-container">
+                        <div class="spinner" id="spinner" style="display:none">
+                          <div class="double-bounce1"></div>
+                          <div class="double-bounce2"></div>
+                        </div>
+                        <div class="youtube-player" data-id="PwVeUq9oKxo"></div>
+                    </div>
+
+                    <a href="https://www.youtube.com/user/repulsiverapunzel" target="_blank" class="btn" title="Kenopia on Youtube" rel="nofollow">
+                        <p class="label">mehr videos</p><p class="symbol">roundedyoutube</p>
+                    </a>
+
+                </section>
+            </div>
+
+            <div class="full-1_5" id="event">
+
+                <section class="content">
+
+                    <h2 class="pale">Auftritte & Events</h2>
+                    <p class="intro">Hier kann sich kurzfristig etwas ändern. Also schaut immer mal wieder rein oder abboniert uns bei <a href="https://www.facebook.com/kenopiaband/" title="Facebook - öffnet in neuem Fenster" target="_blank">Facebook</a> oder <a href="https://www.instagram.com/kenopia/" title="Instagram - öffnet in neuem Fenster"  target="_blank">Instagram</a>.</p>
+
+                    <!--<section class="event-wrapper">
+
+                        <ul class="event-list">
+
+                            <li class="event">
+
+                                <div class="details">
+
+                                    <div class="loc">
+                                        <p>01.10.2017 · sonntag</p>
+                                        <p>La Victoria</p>
+                                    </div>
+                                    <a class="place-link" id="laVictoria" target="_self" href="#map">
+                                        <button type="button" class="deactivated"name="button">Auf Karte anzeigen</button>
+                                    </a>
+                                    <div class="canceled">
+                                        <p>abgesagt</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <div class="map-wrapper">
+                            <div id="map"></div>
+
+                        </div>
+
+                    </section>-->
+                    <p class="no-gigs">Im Augenblick sind keine Auftritte geplant.</p>
+
+                </section>
+
+            </div>
+
+
+            <div class="full-2" id="members">
+                 <section class="content">
+
+                    <h2 class="dark">über kenopia</h2>
+                    <p class="seo">Die Musik von Kenopia aus Bonn beschwört den ortlosen Widerhall eines geländerlosen Treppenhauses, ein vergehendes Irgendwo zwischen zerschlagenen Fenstern und verwitternden Steinen. Bedächtig geschleifte Gitarrenklänge und trocken geschliffenes Schlagzeug schieben sich wie leicht rostverfärbte Tropfen aus der Regenrinne, während dunkel schimmernder Gesang durch verlorene Flure hallt und eine dystopische Sehnsucht nach Halbschatten besingt. Unter der abgekratzten Patina von Tool, Portishead und einer Prise Porcupine Tree kommt an der noch warmen Backsteinwand eine blitzende Klinke zum Vorschein. Die zugemauerten Türbögen lassen schon lange niemanden mehr hindurch – sondern nur ahnungsvoll lauschen.</p>
+
+                    <section class="flex">
+                        <div class="ramon">
+                            <section>
+                                <h3>ramon</h3>
+                                <p>Gitarre</p>
+                            </section>
+                        </div>
+
+                        <div class="annika">
+                            <section>
+                                <h3>annika</h3>
+                                <p>Gesang</p>
+                            </section>
+                        </div>
+
+                        <div class="mathis">
+                            <section>
+                                <h3>mathis</h3>
+                                <p>Schlagzeug</p>
+                            </section>
+                        </div>
+
+                    </section>
+
+                </section>
+            </div>
+
+            <div class="full-1_5" id="pictures">
+
+                <section class="content">
+
+                    <h2 class="pale">Bilder</h2>
+
+                    <div class="gallery">
+                        <div class="mySlides fade"><img id="attic01" alt="Kenopia Gruppenfoto" class="landscape"><p class="caption">Foto von Tim Beikircher</p class="caption"></div>
+                        <div class="mySlides fade"><img id="session04" alt="Kenopia im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img id="session01" alt="Annika im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img id="session02" alt="Ramon im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img id="session03" alt="Mathis im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img id="session05" alt="Kenopia im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+                        <div class="mySlides fade"><img id="session06" alt="Annika im Session" class="landscape"><p class="caption">Foto von Daniel Neumann</p class="caption"></div>
+
+
+                        <p class="prev" onclick="plusSlides(-1)">
+                            <svg fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 4l9 16 9-16H3zm3.38 2h11.25L12 16 6.38 6z"/>
+                            </svg>
+                        </p>
+                        <p class="next" onclick="plusSlides(1)">
+                            <svg fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 4l9 16 9-16H3zm3.38 2h11.25L12 16 6.38 6z"/>
+                            </svg>
+                        </p>
+
+                    </div>
+
+                  <div class="dot-wrapper" style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                      <span class="dot" onclick="currentSlide(4)"></span>
+                      <span class="dot" onclick="currentSlide(5)"></span>
+                      <span class="dot" onclick="currentSlide(6)"></span>
+                      <span class="dot" onclick="currentSlide(7)"></span>
+                  </div>
+
+                </section>
+
+            </div>
+
+            <script type="text/javascript">
+            
+                var slideIndex = 1;
+                    showSlides(slideIndex);
+            
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+            
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+            
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1};
+                  if (n < 1) {slideIndex = slides.length};
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+              }
+            
+            </script>
+            
+
+            <div class="full-3" id="contact">
+                <section class="content">
+
+                    <div class="mail-wrap">
+                        <a href="mailto:info@kenopia.de" class="mail" title="opens e-mail-app">info@kenopia.de</a>
+                    </div>
+
+                    <div class="social">
+                        <h3>oder schaut mal hier vorbei</h3>
+                        <a href="https://www.facebook.com/kenopiaband/" class="symbol" target="_blank" title="Kenopia on Facebook">roundedfacebook</a>
+                        <a href="https://www.youtube.com/user/repulsiverapunzel" class="symbol" target="_blank" title="Kenopia on Youtube">roundedyoutube</a>
+                        <a href="https://www.instagram.com/kenopia/" class="symbol" target="_blank" title="Kenopia on Instagram">roundedinstagram</a>
+                    </div>
+
+                </section>
+            </div>
+
+            <footer>
+                <div class="content">
+                    <p>&copy; 2018 Kenopia</p>
+                    <a href="/impressum.html"title="impressum">Impressum</a>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,400' rel='stylesheet' type='text/css'>
+    <script src="script/jquery.min.js"></script>
+    <script async defer src="script/script.js"></script>
+    <!--<script>
+    
+        var map;
+        var center = {lat: 50.73743, lng: 7.0982068};
+        var zoom = 11;
+        var koorLav = {lat: 50.7372326, lng: 7.085939000000053};
+        var koorSession={lat: 50.73280150000001, lng: 7.099229100000002};
+        function initMap() {
+            var mapOptions = {
+    
+                zoom: zoom,
+                center: center,
+                disableDefaultUI: true,
+                draggable: true,
+                zoomControl: true,
+                scrollwheel: false,
+                styles : [
+      {
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#bdbdbd"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#dadada"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#c9c9c9"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      }
+        ]
+                };
+                map = new google.maps.Map(document.getElementById('map'),
+                mapOptions);
+                var image = 'img/map-loc.png';
+    
+                //Setting InfoWindows
+                var infoTextSession = '<h3 class="info">Session</h3>' + '<p>Gerhard-von-Are-Straße 4</p>' + '<p>53111 Bonn</p>'+ '<a href="https://www.facebook.com/events/221786924894725" target="_blank">Facebook</a>';
+                var infowindowSession = new google.maps.InfoWindow({
+                    content: infoTextSession
+                  });
+                var infoTextLaVictoria = '<h3>La Victoria</h3>' + '<p>Bornheimer Str. 57</p>' + '<p>53119 Bonn</p>' + '<a href="https://www.facebook.com/events/1731164677197666/" target="_blank">Facebook</a>';
+                var infowindowLaVictoria = new google.maps.InfoWindow({
+                      content: infoTextLaVictoria
+                });
+    
+                /*//Marker Session
+                var markerSession = new google.maps.Marker({
+                    position: koorSession,
+                    map: map,
+                    title: 'Session',
+                    icon: image
+                 });
+                markerSession.addListener('click', function() {
+                    infowindowSession.open(map, markerSession);
+                    map.setZoom(14);
+                    map.setCenter(markerSession.getPosition());
+                });
+    */
+                //Marker La Victoria
+                var markerLaVictoria = new google.maps.Marker({
+                    position: koorLav,
+                    map: map,
+                    title: 'La Victoria',
+                    icon: image
+                    });
+                markerLaVictoria.addListener('click', function() {
+                    infowindowLaVictoria.open(map, markerLaVictoria);
+                    map.setZoom(14);
+                    map.setCenter(markerLaVictoria.getPosition());
+                });
+    
+                //Add Link
+                /*$('#session').click(function(){
+                    infowindowSession.open(map, markerSession);
+                    map.setZoom(14);
+                    map.setCenter(markerSession.getPosition());
+                });
+    */
+                $('#laVictoria').click(function(){
+                    infowindowLaVictoria.open(map, markerLaVictoria);
+                    map.setZoom(14);
+                    map.setCenter(markerLaVictoria.getPosition());
+                });
+            }
+    
+    
+    </script>
+    -->
+    
+    <script>
+        loadCSS( "css/style.css" );
+    </script>
+</body>
+</html>
